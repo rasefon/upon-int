@@ -1,0 +1,48 @@
+arithmetic:
+- file1: 1.csv
+  key_index1: [5]
+  subject_index1: [9]
+  file2: 2.csv
+  key_index2: [5]
+  subject_index2: [9]
+  operator: +
+  output: ../comparation/temp.csv
+
+comparation:
+- file1: base.csv
+  key_index1: [5]
+  subject_index1: [9]
+  file2: temp.csv
+  key_index2: [0]
+  subject_index2: [1]
+  operator: ==
+  output: ../result.csv
+
+concat:
+- file1: 1.csv
+  key_index1: [1,2]
+  subject_index1: [0,6]
+  file2: 2.csv
+  key_index2: [6,7]
+  subject_index2: [0,1,2,3,4,5,8,9,10,11,12,13,14]
+  operator: ++
+  output: result.csv
+
+check:
+- base_file: 2.csv
+  base_key_index: 3
+  base_subject_index: 7
+  file: 1.csv
+  key_index: 0
+  subject_index: 2
+  output_key: key1.log
+  output_subject: checke_result1.csv
+
+- base_file: 2.csv
+  base_key_index: 3
+  base_subject_index: 7
+  file: 1.csv
+  key_index: 0
+  subject_index: 3
+  output_key: key2.log
+  output_subject: checke_result2.csv

@@ -1,0 +1,46 @@
+﻿#concat:
+#- file1: 测试.csv
+#  key_index1: [1,2]
+#  subject_index1: [0,6]
+#  file2: 2.csv
+#  key_index2: [6,7]
+#  subject_index2: [0,1,2,3,4,5,8,9,10,11,12,13,14]
+#  operator: ++
+#  output: result.csv
+#
+#arithmetic:
+#- file1: 1.csv
+#  key_index1: [1]
+#  subject_index1: [0]
+#  file2: 2.csv
+#  key_index2: [1]
+#  subject_index2: [0]
+#  operator: u+
+#  output: ../comparation/3.csv
+
+#SetMinus:
+#- file1: 发货.csv
+  #key_index1: [2]
+  #subject_index1: []
+  #file2: 包货.csv
+  #key_index2: [0]
+  #subject_index2: []
+  #operator: s-
+  #output: 包货结果.csv
+
+#- file1: 发货.csv
+  #key_index1: [2]
+  #subject_index1: []
+  #file2: 配货.csv
+  #key_index2: [0]
+  #subject_index2: []
+  #operator: s-
+  #output: 配货结果.csv
+
+einupdate:
+- file: 配货绩效.csv
+  key_index: [9, 10]
+  subject_index: [12]
+  operator: e+
+  output: result.csv
+
